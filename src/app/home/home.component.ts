@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { BagsComponent } from '../bags/bags.component';
 import { CommonModule } from '@angular/common';
 import { Bags } from '../bags';
+import { DetailsComponent } from '../details/details.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, BagsComponent],
+  imports: [CommonModule, BagsComponent, DetailsComponent],
   template: `<section>
       <form>
         <input placeholder="filter" />
