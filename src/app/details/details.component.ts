@@ -27,6 +27,8 @@ export class DetailsComponent {
   Bags: Bags | undefined;
   constructor() {
     const bagsId = Number(this.route.snapshot.params['id']);
-    this.Bags = this.BagsService.getBagsbyId(bagsId);
+    this.BagsService.getBagsbyId(bagsId).then((Bags) => {
+      this.Bags = Bags;
+    });
   }
 }

@@ -29,6 +29,8 @@ export class HomeComponent {
 
   constructor() {
     // Fetch the bags list from the service
-    this.bagsList = this.bagsService.getAllBags();
+    this.bagsService.getAllBags().then((bagsList: Bags[]) => {
+      this.bagsList = bagsList;
+    });
   }
 }
