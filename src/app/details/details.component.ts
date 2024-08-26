@@ -7,7 +7,18 @@ import { Bags } from '../bags';
   selector: 'app-details',
   standalone: true,
   imports: [CommonModule],
-  template: ` <section>{{ Bags?.id }}</section> `,
+  template: `
+    <article>
+      <section>
+        <h1>{{ Bags?.name }}</h1>
+        <img [src]="Bags?.photo" />
+        <section>
+          <p>{{ Bags?.description }}</p>
+        </section>
+        <button>In Cart</button>
+      </section>
+    </article>
+  `,
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent {
