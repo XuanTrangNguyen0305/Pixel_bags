@@ -5,11 +5,12 @@ import { BagsComponent } from '../bags/bags.component';
 import { DetailsComponent } from '../details/details.component';
 import { Bags } from '../bags';
 import { BagsService } from '../bags.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, BagsComponent, DetailsComponent],
+  imports: [CommonModule, BagsComponent, DetailsComponent, NavbarComponent],
   template: `
     <section>
       <form>
